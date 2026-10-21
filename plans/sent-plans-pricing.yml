@@ -1,0 +1,14 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.sent.dm/pricing
+sources:
+- https://www.sent.dm/pricing
+name: Sent pricing
+audience: developer-api
+pricing_basis: per-call
+plans:
+- name: Pay as you go
+  price_text: $0.0150 /contact /month
+  price: 0.015
+docs: https://www.sent.dm/pricing

@@ -1,0 +1,32 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.sent.dm/reference/api/rate-limits
+sources:
+- https://docs.sent.dm/reference/api/rate-limits
+name: Sent rate limits
+limits:
+- name: Standard
+  limit_text: 10,000 requests per minute
+  max: 10000
+  window: 60-second window
+  scope: All standard endpoints
+  endpoint: Every other v3 endpoint
+- name: Sensitive
+  limit_text: 10 requests per minute
+  max: 10
+  window: 60-second window
+  scope: Sensitive endpoints
+  endpoint: Webhook secret rotation, Webhook test delivery, Message resend
+- name: Voice SDK telemetry
+  limit_text: 30/min per app identity, and 3,000/min per account Sliding 60-second
+  window: 60-second window
+  scope: Voice SDK telemetry endpoint
+  endpoint: POST /v3/voice/telemetry
+headers:
+- Retry-After
+- X-RateLimit-Limit
+- X-RateLimit-Remaining
+- X-RateLimit-Reset
+exhaustion_status: 429
+docs: https://docs.sent.dm/reference/api/rate-limits

@@ -1,0 +1,23 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.sent.dm/reference/api/authentication
+sources:
+- https://docs.sent.dm/reference/api/authentication
+- https://docs.sent.dm/reference/api/channels/SentDmServicesEndpointsCustomerAPIv3ChannelsCreateVoiceTokenEndpoint
+- https://docs.sent.dm/reference/api/webhooks/SentDmServicesEndpointsCustomerAPIv3WebhooksRotateWebhookSecretEndpoint
+- https://docs.sent.dm/reference/api/profiles/SentDmServicesEndpointsCustomerAPIv3ProfilesCompleteProfileEndpoint
+schemes:
+- type: apiKey
+  name: x-api-key
+  evidence: The Sent API v3 authenticates every request with an API key. Send it in the x-api-key header, or as a Bearer token in the Authorization
+    header.
+  location: header
+  header: x-api-key
+- type: http-bearer
+  name: Authorization
+  evidence: The Sent API v3 authenticates every request with an API key. Send it in the x-api-key header, or as a Bearer token in the Authorization
+    header.
+  location: header
+  header: Authorization
+docs: https://docs.sent.dm/reference/api/authentication

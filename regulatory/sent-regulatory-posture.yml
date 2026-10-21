@@ -1,0 +1,60 @@
+generated: '2026-10-21'
+method: searched
+source: https://www.sent.dm/resources/privacy-policy
+signals:
+  data_subject_request:
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Access – The right to request access to and obtain a copy of any Personal Information we may have about you."
+        note: Provides right of access to personal data.
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Deletion – The right to delete your Personal Information that we have collected or obtained, subject to certain exceptions."
+        note: Provides right to erasure.
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Correction – The right to request that we correct any inaccuracies in your Personal Information, subject to certain exceptions."
+        note: Provides right to rectification.
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Opt Out – The right to: (a) opt out of the processing of your Personal Information for purposes of targeted or cross-context behavioral advertising, and (b) opt out of the sale of your Personal Information."
+        note: Provides opt‑out rights.
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Objection/Restriction of Processing – The right to object or restrict us from processing your Personal Information in certain circumstances."
+        note: Provides objection/restriction rights.
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Withdraw Consent – The right to withdraw your consent where we are relying on your consent to process your Personal Information."
+        note: Right to withdraw consent.
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Automated Decision‑Making – The right to know when you are subject to automated decision‑making, the Personal Information used to render the decision, the principal factors and parameters involved in the decision, and human review or correction of the decision (or its underlying data, where appropriate)."
+        note: Provides transparency on automated decisions.
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Lodge a Complaint – The right to lodge a complaint with a supervisory authority or other regulatory agency if you believe we have violated any of the rights afforded to you under applicable data protection laws."
+        note: Provides complaint mechanism.
+  data_retention:
+    - evidence:
+        source: https://www.sent.dm/resources/privacy-policy
+        http_status: 200
+        fetched: true
+        quote: "Sent retains your personal information for as long as necessary to fulfill the purposes outlined in their privacy notice, unless legal obligations require a longer..."
+        note: Describes retention period policy.

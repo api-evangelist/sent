@@ -1,0 +1,410 @@
+generated: '2026-10-21'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/sent-openapi-generated.yml
+vocabulary:
+  name: Sent Domain Vocabulary
+  description: 'Terms declared by Sent''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions. Derived,
+    not authored.'
+  version: '2026-10-21'
+  terms:
+  - term: GetV3CallsResponse
+    definition: 'Object declared by the contract with fields: success, data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/GetV3CallsResponse
+  - term: PostV3CallsIdHangupRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3CallsIdHangupRequest
+  - term: PostV3CallsIdHangupResponse
+    definition: 'Object declared by the contract with fields: 204.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3CallsIdHangupResponse
+  - term: DeleteV3CallsIdParticipantsResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/DeleteV3CallsIdParticipantsResponse
+  - term: PostV3CallsIdParticipantsRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3CallsIdParticipantsRequest
+  - term: PostV3CallsIdParticipantsResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3CallsIdParticipantsResponse
+  - term: DeleteV3CallsIdParticipantsParticipantidResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/DeleteV3CallsIdParticipantsParticipantidResponse
+  - term: PatchV3CallsIdParticipantsParticipantidRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3CallsIdParticipantsParticipantidRequest
+  - term: PatchV3CallsIdParticipantsParticipantidResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3CallsIdParticipantsParticipantidResponse
+  - term: PostV3CallsIdRecordingsRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3CallsIdRecordingsRequest
+  - term: PostV3CallsIdRecordingsResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3CallsIdRecordingsResponse
+  - term: PostV3ChannelsRcsRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsRcsRequest
+  - term: PostV3ChannelsRcsResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsRcsResponse
+  - term: PostV3ChannelsSmsRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsSmsRequest
+  - term: PostV3ChannelsSmsResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsSmsResponse
+  - term: PatchV3ChannelsSmsCountryTypeRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3ChannelsSmsCountryTypeRequest
+  - term: PatchV3ChannelsSmsCountryTypeResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3ChannelsSmsCountryTypeResponse
+  - term: PostV3ChannelsVoiceRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsVoiceRequest
+  - term: PostV3ChannelsVoiceResponse
+    definition: 'Object declared by the contract with fields: 202.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsVoiceResponse
+  - term: PostV3ChannelsVoiceTokensRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsVoiceTokensRequest
+  - term: PostV3ChannelsVoiceTokensResponse
+    definition: 'Object declared by the contract with fields: 200.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsVoiceTokensResponse
+  - term: PatchV3ChannelsVoiceNumberRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3ChannelsVoiceNumberRequest
+  - term: PatchV3ChannelsVoiceNumberResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3ChannelsVoiceNumberResponse
+  - term: PostV3ChannelsVoiceNumberRotateSecretRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsVoiceNumberRotateSecretRequest
+  - term: PostV3ChannelsVoiceNumberRotateSecretResponse
+    definition: 'Object declared by the contract with fields: 202.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsVoiceNumberRotateSecretResponse
+  - term: PostV3ChannelsVoiceNumberTestRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsVoiceNumberTestRequest
+  - term: PostV3ChannelsVoiceNumberTestResponse
+    definition: 'Object declared by the contract with fields: 202.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsVoiceNumberTestResponse
+  - term: PostV3ChannelsWhatsappRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsWhatsappRequest
+  - term: PostV3ChannelsWhatsappResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ChannelsWhatsappResponse
+  - term: PostV3ContactsRequest
+    definition: 'Object declared by the contract with fields: sandbox, phone_number.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ContactsRequest
+  - term: PostV3ContactsResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ContactsResponse
+  - term: PatchV3ContactsIdRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3ContactsIdRequest
+  - term: PatchV3ContactsIdResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3ContactsIdResponse
+  - term: GetV3ConversationsResponse
+    definition: 'Object declared by the contract with fields: success, data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/GetV3ConversationsResponse
+  - term: GetV3ConversationsIdResponse
+    definition: 'Object declared by the contract with fields: success, data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/GetV3ConversationsIdResponse
+  - term: GetV3MeResponse
+    definition: 'Object declared by the contract with fields: success, status, error.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/GetV3MeResponse
+  - term: PostV3MessagesRequest
+    definition: 'Object declared by the contract with fields: sandbox, to, channel, template.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3MessagesRequest
+  - term: PostV3MessagesResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3MessagesResponse
+  - term: GetV3MessagesIdResponse
+    definition: 'Object declared by the contract with fields: success, data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/GetV3MessagesIdResponse
+  - term: PostV3MessagesIdCancelRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3MessagesIdCancelRequest
+  - term: PostV3MessagesIdCancelResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3MessagesIdCancelResponse
+  - term: PostV3MessagesIdResendRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3MessagesIdResendRequest
+  - term: PostV3MessagesIdResendResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3MessagesIdResendResponse
+  - term: PostV3ProfilesRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ProfilesRequest
+  - term: PatchV3ProfilesProfileidRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3ProfilesProfileidRequest
+  - term: PostV3ProfilesProfileidCampaignsRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ProfilesProfileidCampaignsRequest
+  - term: PutV3ProfilesProfileidCampaignsCampaignidRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PutV3ProfilesProfileidCampaignsCampaignidRequest
+  - term: PostV3ProfilesProfileidCompleteRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3ProfilesProfileidCompleteRequest
+  - term: PostV3SenderProfilesRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3SenderProfilesRequest
+  - term: PostV3SenderProfilesResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3SenderProfilesResponse
+  - term: PatchV3SenderProfilesIdRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3SenderProfilesIdRequest
+  - term: PatchV3SenderProfilesIdResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3SenderProfilesIdResponse
+  - term: GetV3TemplatesResponse
+    definition: 'Object declared by the contract with fields: success, data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/GetV3TemplatesResponse
+  - term: PostV3TemplatesRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3TemplatesRequest
+  - term: PostV3TemplatesResponse
+    definition: 'Object declared by the contract with fields: success, data.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3TemplatesResponse
+  - term: DeleteV3TemplatesIdResponse
+    definition: 'Object declared by the contract with fields: 204.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/DeleteV3TemplatesIdResponse
+  - term: PutV3TemplatesIdRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PutV3TemplatesIdRequest
+  - term: PutV3TemplatesIdResponse
+    definition: 'Object declared by the contract with fields: 200.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PutV3TemplatesIdResponse
+  - term: PostV3UsersRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3UsersRequest
+  - term: PostV3UsersResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3UsersResponse
+  - term: DeleteV3UsersUseridResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/DeleteV3UsersUseridResponse
+  - term: PatchV3UsersUseridRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3UsersUseridRequest
+  - term: PatchV3UsersUseridResponse
+    definition: 'Object declared by the contract with fields: X-Sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3UsersUseridResponse
+  - term: GetV3WebhooksResponse
+    definition: 'Object declared by the contract with fields: success, data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/GetV3WebhooksResponse
+  - term: PostV3WebhooksRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3WebhooksRequest
+  - term: PostV3WebhooksResponse
+    definition: 'Object declared by the contract with fields: 201.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3WebhooksResponse
+  - term: PutV3WebhooksIdRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PutV3WebhooksIdRequest
+  - term: PutV3WebhooksIdResponse
+    definition: 'Object declared by the contract with fields: 200.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PutV3WebhooksIdResponse
+  - term: GetV3WebhooksIdEventsResponse
+    definition: 'Object declared by the contract with fields: success, data, meta.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/GetV3WebhooksIdEventsResponse
+  - term: PostV3WebhooksIdRotateSecretRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3WebhooksIdRotateSecretRequest
+  - term: PostV3WebhooksIdRotateSecretResponse
+    definition: 'Object declared by the contract with fields: 200.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3WebhooksIdRotateSecretResponse
+  - term: PostV3WebhooksIdTestRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3WebhooksIdTestRequest
+  - term: PostV3WebhooksIdTestResponse
+    definition: 'Object declared by the contract with fields: 200.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PostV3WebhooksIdTestResponse
+  - term: PatchV3WebhooksIdToggleStatusRequest
+    definition: 'Object declared by the contract with fields: sandbox.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3WebhooksIdToggleStatusRequest
+  - term: PatchV3WebhooksIdToggleStatusResponse
+    definition: 'Object declared by the contract with fields: 200.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/sent-openapi-generated.yml#/components/schemas/PatchV3WebhooksIdToggleStatusResponse
+  - term: Calls
+    definition: 'Resource group in the contract; its operation GET /v3/calls: Data Models'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/sent-openapi-generated.yml
+  - term: Channels
+    definition: 'Resource group in the contract; its operation POST /v3/channels/rcs: Sandbox Mode'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/sent-openapi-generated.yml
+  - term: Contacts
+    definition: 'Resource group in the contract; its operation GET /v3/contacts: GET /v3/contacts'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/sent-openapi-generated.yml
+  - term: Conversations
+    definition: 'Resource group in the contract; its operation GET /v3/conversations: Data Models'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/sent-openapi-generated.yml
+  - term: Me
+    definition: 'Resource group in the contract; its operation GET /v3/me: GET /v3/me'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/sent-openapi-generated.yml

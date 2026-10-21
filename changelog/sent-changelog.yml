@@ -1,0 +1,19 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.sent.dm/reference/changelog
+sources:
+- https://docs.sent.dm/reference/changelog
+entries:
+- breaking: false
+  highlights:
+  - 'WhatsApp: Disconnect, Multi-Line Free Text, and Fixes'
+  - 'Added: disconnect a WhatsApp Business Account. Channels > WhatsApp has a Disconnect button next to Switch Account, for organizations and
+    Sender Profiles.'
+  - 'Changed: free-form text keeps line breaks, tabs, and runs of spaces on every channel. These were rejected with 400 before, so multi-line
+    messages and WhatsApp list and quote formatting could not be sent.'
+  - 'Added: error code BUSINESS_029. A number listed in channels is not an active sender on your account.'
+  date: '2026-10-01'
+current_version: 2026-10
+note: Versioning scheme follows calendar year and month (e.g., 2026-10).
+docs: https://docs.sent.dm/reference/changelog

@@ -1,23 +1,140 @@
 aid: sent
+
 name: Sent
-description: 'Sent is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.sent.dm/media/images/og-image-4fee8e22.png
+
+description: Sent provides a single API that enables developers to send messages via SMS, WhatsApp, and RCS. The service handles routing, compliance,
+  formatting, and delivery, allowing customers in e‑commerce, SaaS, fintech, and healthcare to deliver authentication codes, order notifications,
+  cart‑recovery messages, and marketing campaigns. Sent offers SDKs for multiple languages and signed webhooks for delivery tracking.
+
 url: https://raw.githubusercontent.com/api-evangelist/sent/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
-- Company
-apis: []
+- SMS
+- WhatsApp
+- RCS
+- Messaging API
+- Communications
+- Developer Platform
+- Authentication
+- Order Notifications
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: RateLimits
+  url: rate-limits/sent-rate-limits.yml
+- type: Plans
+  url: plans/sent-plans-pricing.yml
+- type: Spectral
+  url: rules/sent-rules.yml
+- type: JSONLD
+  url: json-ld/sent-context.jsonld
+- type: Vocabulary
+  url: vocabulary/sent-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/sent-webhooks.yml
+- type: DataModel
+  url: data-model/sent-data-model.yml
+- type: ChangeLog
+  url: changelog/sent-changelog.yml
+- type: Idempotency
+  url: conventions/sent-conventions.yml
+- type: Conventions
+  url: conventions/sent-conventions.yml
+- type: Security
+  url: https://www.sent.dm/resources/privacy-policy
+- type: Authentication
+  url: authentication/sent-authentication.yml
+- type: Conformance
+  url: conformance/sent-conformance.yml
+- type: LLMsTxt
+  url: llms/sent-llms.txt
+- type: SecurityTxt
+  url: well-known/sent-sent-security.txt
+- type: SecurityTxt
+  url: well-known/sent-security.txt
+- type: SecurityTxt
+  url: well-known/sent-docs-security.txt
+- type: SecurityTxt
+  url: well-known/sent-dev-security.txt
+- type: SecurityTxt
+  url: well-known/sent-app-security.txt
+- type: SecurityTxt
+  url: well-known/sent-api-security.txt
+- type: WellKnown
+  url: well-known/sent-well-known.yml
+- type: Hosts
+  url: hosts/sent-hosts.yml
+- type: Vendors
+  url: vendors/sent-vendors.yml
+- type: TermsOfService
+  url: https://www.sent.dm/legal/terms-of-service
+- type: Support
+  url: https://help.sent.dm
+- type: SignUp
+  url: https://app.sent.dm/sign-up
+- type: PrivacyPolicy
+  url: https://www.sent.dm/en/legal/privacy-policy
+- type: Pricing
+  url: https://www.sent.dm/pricing
+- type: Newsroom
+  url: https://www.sent.dm/news
+- type: GitHubOrganization
+  url: https://github.com/sentdm
+- type: Blog
+  url: https://www.sent.dm/blog
+- type: APIReference
+  url: https://docs.sent.dm/reference/api
+- type: GettingStarted
+  url: https://docs.sent.dm/reference/api/profiles/SentDmServicesEndpointsCustomerAPIv3ProfilesCompleteProfileEndpoint
+- type: Documentation
+  url: https://docs.sent.dm/
+- type: DeveloperPortal
+  url: https://docs.sent.dm\
+- type: VulnerabilityDisclosure
+  url: security/sent-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/sent-domain-security.yml
 - type: Website
   url: https://sent.dm/
+
+apis:
+- name: Sent API
+  description: Sent provides messaging APIs for SMS, WhatsApp and RCS.
+  humanURL: https://www.sent.dm/
+  aid: sent:sent-api
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The provider's documentation site is a JavaScript-rendered Next.js application with no machine‑readable OpenAPI, GraphQL, AsyncAPI or
+    other contract files.
+  evidence:
+  - url: https://www.sent.dm/
+    status: 200
+  checked: '2026-10-21'
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 31
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

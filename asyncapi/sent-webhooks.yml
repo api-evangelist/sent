@@ -1,0 +1,24 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.sent.dm/reference/api/webhooks/SentDmServicesEndpointsCustomerAPIv3WebhooksGetWebhooksEndpoint
+sources:
+- https://docs.sent.dm/reference/api/webhooks/SentDmServicesEndpointsCustomerAPIv3WebhooksGetWebhooksEndpoint
+- https://docs.sent.dm/reference/api/webhooks/SentDmServicesEndpointsCustomerAPIv3WebhooksGetWebhookEndpoint
+- https://docs.sent.dm/reference/api/webhooks/SentDmServicesEndpointsCustomerAPIv3WebhooksCreateWebhookEndpoint
+- https://docs.sent.dm/reference/api/webhooks/SentDmServicesEndpointsCustomerAPIv3WebhooksUpdateWebhookEndpoint
+description: Sent webhooks deliver events such as "contact", "message" and "templates". The webhook payload is signed using a signing secret (provided
+  in the webhook object as "signing_secret") which can be used to verify a signature header. Retries are configurable via the "retry_count" field
+  (default 3) and delivery timeout via "timeout_seconds" (default 30).
+events:
+- event: contact
+  description: Contact‑related events.
+- event: message
+  description: Message‑related events.
+- event: templates
+  description: Template‑related events.
+delivery:
+  signature: signed with the webhook's signing_secret (header name not explicitly documented)
+  retries: configurable via retry_count (example value 3)
+  content_type: application/json
+docs: https://docs.sent.dm/reference/api/webhooks/SentDmServicesEndpointsCustomerAPIv3WebhooksGetWebhooksEndpoint

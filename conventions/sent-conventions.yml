@@ -1,0 +1,25 @@
+generated: '2026-10-21'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.sent.dm/reference/api/profiles/SentDmServicesEndpointsCustomerAPIv3ProfilesCompleteProfileEndpoint
+sources:
+- https://docs.sent.dm/reference/api/profiles/SentDmServicesEndpointsCustomerAPIv3ProfilesCompleteProfileEndpoint
+- https://docs.sent.dm/reference/api/authentication
+- https://docs.sent.dm/reference/api/channels/SentDmServicesEndpointsCustomerAPIv3ChannelsCreateVoiceTokenEndpoint
+- https://docs.sent.dm/reference/api/webhooks/SentDmServicesEndpointsCustomerAPIv3WebhooksRotateWebhookSecretEndpoint
+idempotency:
+  coverage: partial
+  header: Idempotency-Key
+  evidence: The Idempotency-Key header is shown in examples for POST endpoints such as Complete profile setup, Create a voice token, and Rotate
+    webhook signing secret. It is not described as applying to all write operations.
+  scope:
+  - not enumerated on the pages read
+pagination:
+  style: paginated list
+  evidence: List calls endpoint returns a paginated list of calls, but the specific pagination parameters and response fields are not documented
+    on the pages.
+versioning: Responses include a meta.version field (e.g., "v3") and all v3 responses include an X-API-Version header set to v3.
+error_envelope: 'Responses follow a consistent envelope with top‑level keys: success, data, error, and meta.'
+authentication: API key authentication via the x-api-key header (UUID) or as a Bearer token in the Authorization header.
+request_tracing: Responses include an X-Request-Id header (e.g., "req_7X9zKp2jDw").
+docs: https://docs.sent.dm/reference/api/profiles/SentDmServicesEndpointsCustomerAPIv3ProfilesCompleteProfileEndpoint

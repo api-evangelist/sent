@@ -1,0 +1,6 @@
+Canonical: https://www.sent.dm/security.txt
+Contact: mailto:devops@sent.dm
+Expires: 2029-12-31T11:59:00Z
+Hiring: https://careers.sent.dm
+Policy: https://www.sent.dm/resources/privacy-policy
+Preferred-Languages: en

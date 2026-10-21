@@ -1,0 +1,131 @@
+{
+  "@context": {
+    "@vocab": "https://sent.dm/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "sent": "https://sent.dm/schema#",
+    "GetV3CallsResponse": "sent:GetV3CallsResponse",
+    "success": {
+      "@id": "sent:success",
+      "@type": "xsd:boolean"
+    },
+    "data": {
+      "@id": "sent:data"
+    },
+    "meta": {
+      "@id": "sent:meta"
+    },
+    "PostV3CallsIdHangupRequest": "sent:PostV3CallsIdHangupRequest",
+    "sandbox": {
+      "@id": "sent:sandbox",
+      "@type": "xsd:boolean"
+    },
+    "PostV3CallsIdHangupResponse": "sent:PostV3CallsIdHangupResponse",
+    "DeleteV3CallsIdParticipantsResponse": "sent:DeleteV3CallsIdParticipantsResponse",
+    "X-Sandbox": {
+      "@id": "sent:X-Sandbox",
+      "@type": "xsd:string"
+    },
+    "PostV3CallsIdParticipantsRequest": "sent:PostV3CallsIdParticipantsRequest",
+    "PostV3CallsIdParticipantsResponse": "sent:PostV3CallsIdParticipantsResponse",
+    "DeleteV3CallsIdParticipantsParticipantidResponse": "sent:DeleteV3CallsIdParticipantsParticipantidResponse",
+    "PatchV3CallsIdParticipantsParticipantidRequest": "sent:PatchV3CallsIdParticipantsParticipantidRequest",
+    "PatchV3CallsIdParticipantsParticipantidResponse": "sent:PatchV3CallsIdParticipantsParticipantidResponse",
+    "PostV3CallsIdRecordingsRequest": "sent:PostV3CallsIdRecordingsRequest",
+    "PostV3CallsIdRecordingsResponse": "sent:PostV3CallsIdRecordingsResponse",
+    "PostV3ChannelsRcsRequest": "sent:PostV3ChannelsRcsRequest",
+    "PostV3ChannelsRcsResponse": "sent:PostV3ChannelsRcsResponse",
+    "PostV3ChannelsSmsRequest": "sent:PostV3ChannelsSmsRequest",
+    "PostV3ChannelsSmsResponse": "sent:PostV3ChannelsSmsResponse",
+    "PatchV3ChannelsSmsCountryTypeRequest": "sent:PatchV3ChannelsSmsCountryTypeRequest",
+    "PatchV3ChannelsSmsCountryTypeResponse": "sent:PatchV3ChannelsSmsCountryTypeResponse",
+    "PostV3ChannelsVoiceRequest": "sent:PostV3ChannelsVoiceRequest",
+    "PostV3ChannelsVoiceResponse": "sent:PostV3ChannelsVoiceResponse",
+    "PostV3ChannelsVoiceTokensRequest": "sent:PostV3ChannelsVoiceTokensRequest",
+    "PostV3ChannelsVoiceTokensResponse": "sent:PostV3ChannelsVoiceTokensResponse",
+    "PatchV3ChannelsVoiceNumberRequest": "sent:PatchV3ChannelsVoiceNumberRequest",
+    "PatchV3ChannelsVoiceNumberResponse": "sent:PatchV3ChannelsVoiceNumberResponse",
+    "PostV3ChannelsVoiceNumberRotateSecretRequest": "sent:PostV3ChannelsVoiceNumberRotateSecretRequest",
+    "PostV3ChannelsVoiceNumberRotateSecretResponse": "sent:PostV3ChannelsVoiceNumberRotateSecretResponse",
+    "PostV3ChannelsVoiceNumberTestRequest": "sent:PostV3ChannelsVoiceNumberTestRequest",
+    "PostV3ChannelsVoiceNumberTestResponse": "sent:PostV3ChannelsVoiceNumberTestResponse",
+    "PostV3ChannelsWhatsappRequest": "sent:PostV3ChannelsWhatsappRequest",
+    "PostV3ChannelsWhatsappResponse": "sent:PostV3ChannelsWhatsappResponse",
+    "PostV3ContactsRequest": "sent:PostV3ContactsRequest",
+    "phone_number": {
+      "@id": "sent:phone_number",
+      "@type": "xsd:string"
+    },
+    "PostV3ContactsResponse": "sent:PostV3ContactsResponse",
+    "PatchV3ContactsIdRequest": "sent:PatchV3ContactsIdRequest",
+    "PatchV3ContactsIdResponse": "sent:PatchV3ContactsIdResponse",
+    "GetV3ConversationsResponse": "sent:GetV3ConversationsResponse",
+    "GetV3ConversationsIdResponse": "sent:GetV3ConversationsIdResponse",
+    "GetV3MeResponse": "sent:GetV3MeResponse",
+    "status": {
+      "@id": "sent:status",
+      "@type": "xsd:integer"
+    },
+    "error": {
+      "@id": "sent:error"
+    },
+    "PostV3MessagesRequest": "sent:PostV3MessagesRequest",
+    "to": {
+      "@id": "sent:to",
+      "@container": "@list"
+    },
+    "channel": {
+      "@id": "sent:channel",
+      "@container": "@list"
+    },
+    "template": {
+      "@id": "sent:template"
+    },
+    "PostV3MessagesResponse": "sent:PostV3MessagesResponse",
+    "GetV3MessagesIdResponse": "sent:GetV3MessagesIdResponse",
+    "PostV3MessagesIdCancelRequest": "sent:PostV3MessagesIdCancelRequest",
+    "PostV3MessagesIdCancelResponse": "sent:PostV3MessagesIdCancelResponse",
+    "PostV3MessagesIdResendRequest": "sent:PostV3MessagesIdResendRequest",
+    "PostV3MessagesIdResendResponse": "sent:PostV3MessagesIdResendResponse",
+    "PostV3ProfilesRequest": "sent:PostV3ProfilesRequest",
+    "PatchV3ProfilesProfileidRequest": "sent:PatchV3ProfilesProfileidRequest",
+    "PostV3ProfilesProfileidCampaignsRequest": "sent:PostV3ProfilesProfileidCampaignsRequest",
+    "PutV3ProfilesProfileidCampaignsCampaignidRequest": "sent:PutV3ProfilesProfileidCampaignsCampaignidRequest",
+    "PostV3ProfilesProfileidCompleteRequest": "sent:PostV3ProfilesProfileidCompleteRequest",
+    "PostV3SenderProfilesRequest": "sent:PostV3SenderProfilesRequest",
+    "PostV3SenderProfilesResponse": "sent:PostV3SenderProfilesResponse",
+    "PatchV3SenderProfilesIdRequest": "sent:PatchV3SenderProfilesIdRequest",
+    "PatchV3SenderProfilesIdResponse": "sent:PatchV3SenderProfilesIdResponse",
+    "GetV3TemplatesResponse": "sent:GetV3TemplatesResponse",
+    "PostV3TemplatesRequest": "sent:PostV3TemplatesRequest",
+    "PostV3TemplatesResponse": "sent:PostV3TemplatesResponse",
+    "DeleteV3TemplatesIdResponse": "sent:DeleteV3TemplatesIdResponse",
+    "PutV3TemplatesIdRequest": "sent:PutV3TemplatesIdRequest",
+    "PutV3TemplatesIdResponse": "sent:PutV3TemplatesIdResponse",
+    "PostV3UsersRequest": "sent:PostV3UsersRequest",
+    "PostV3UsersResponse": "sent:PostV3UsersResponse",
+    "DeleteV3UsersUseridResponse": "sent:DeleteV3UsersUseridResponse",
+    "PatchV3UsersUseridRequest": "sent:PatchV3UsersUseridRequest",
+    "PatchV3UsersUseridResponse": "sent:PatchV3UsersUseridResponse",
+    "GetV3WebhooksResponse": "sent:GetV3WebhooksResponse",
+    "PostV3WebhooksRequest": "sent:PostV3WebhooksRequest",
+    "PostV3WebhooksResponse": "sent:PostV3WebhooksResponse",
+    "PutV3WebhooksIdRequest": "sent:PutV3WebhooksIdRequest",
+    "PutV3WebhooksIdResponse": "sent:PutV3WebhooksIdResponse",
+    "GetV3WebhooksIdEventsResponse": "sent:GetV3WebhooksIdEventsResponse",
+    "PostV3WebhooksIdRotateSecretRequest": "sent:PostV3WebhooksIdRotateSecretRequest",
+    "PostV3WebhooksIdRotateSecretResponse": "sent:PostV3WebhooksIdRotateSecretResponse",
+    "PostV3WebhooksIdTestRequest": "sent:PostV3WebhooksIdTestRequest",
+    "PostV3WebhooksIdTestResponse": "sent:PostV3WebhooksIdTestResponse",
+    "PatchV3WebhooksIdToggleStatusRequest": "sent:PatchV3WebhooksIdToggleStatusRequest",
+    "PatchV3WebhooksIdToggleStatusResponse": "sent:PatchV3WebhooksIdToggleStatusResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Sent API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Sent's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-21) from openapi/_ae-authored/sent-openapi-generated.yml.",
+  "dcterms:created": "2026-10-21",
+  "dcterms:source": [
+    "openapi/_ae-authored/sent-openapi-generated.yml"
+  ]
+}

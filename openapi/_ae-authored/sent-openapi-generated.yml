@@ -1,0 +1,1869 @@
+openapi: 3.1.0
+info:
+  title: Sent API
+  version: '2026-10-21'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-21: 52 operation(s) read from 5 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Sent has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 2
+    documentation: 50
+    pages-with-code: 1
+    pages-read: 5
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-21'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.sent.dm/reference/glossary
+  - https://docs.sent.dm/reference/api/errors
+  - https://docs.sent.dm/reference/api/test-mode
+  - https://docs.sent.dm/reference/api/data-models
+  - https://docs.sent.dm/reference/api/idempotency
+servers:
+- url: https://api.sent.dm
+paths:
+  /v3/calls:
+    get:
+      operationId: get_v3_calls
+      tags:
+      - Calls
+      summary: Data Models
+      x-source: https://docs.sent.dm/reference/api/data-models
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV3CallsResponse'
+      x-evidence:
+        kind: documentation
+  /v3/calls/{id}/hangup:
+    post:
+      operationId: post_v3_calls_id_hangup
+      tags:
+      - Calls
+      summary: POST /v3/calls/{id}/hangup
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3CallsIdHangupRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3CallsIdHangupResponse'
+      x-evidence:
+        kind: documentation
+  /v3/calls/{id}/participants:
+    delete:
+      operationId: delete_v3_calls_id_participants
+      tags:
+      - Calls
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteV3CallsIdParticipantsResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_v3_calls_id_participants
+      tags:
+      - Calls
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3CallsIdParticipantsRequest'
+      responses:
+        '202':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3CallsIdParticipantsResponse'
+      x-evidence:
+        kind: documentation
+  /v3/calls/{id}/participants/{participantid}:
+    delete:
+      operationId: delete_v3_calls_id_participants_participantid
+      tags:
+      - Calls
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: participantid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteV3CallsIdParticipantsParticipantidResponse'
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_v3_calls_id_participants_participantid
+      tags:
+      - Calls
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: participantid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV3CallsIdParticipantsParticipantidRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV3CallsIdParticipantsParticipantidResponse'
+      x-evidence:
+        kind: documentation
+  /v3/calls/{id}/recordings:
+    post:
+      operationId: post_v3_calls_id_recordings
+      tags:
+      - Calls
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3CallsIdRecordingsRequest'
+      responses:
+        '204':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3CallsIdRecordingsResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/rcs:
+    post:
+      operationId: post_v3_channels_rcs
+      tags:
+      - Channels
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ChannelsRcsRequest'
+      responses:
+        '202':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3ChannelsRcsResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/sms:
+    post:
+      operationId: post_v3_channels_sms
+      tags:
+      - Channels
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ChannelsSmsRequest'
+      responses:
+        '202':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3ChannelsSmsResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/sms/{country}/{type}:
+    patch:
+      operationId: patch_v3_channels_sms_country_type
+      tags:
+      - Channels
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: country
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: type
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV3ChannelsSmsCountryTypeRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV3ChannelsSmsCountryTypeResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/voice:
+    post:
+      operationId: post_v3_channels_voice
+      tags:
+      - Channels
+      summary: POST /v3/channels/voice
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ChannelsVoiceRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3ChannelsVoiceResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/voice/tokens:
+    post:
+      operationId: post_v3_channels_voice_tokens
+      tags:
+      - Channels
+      summary: POST /v3/channels/voice/tokens
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ChannelsVoiceTokensRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3ChannelsVoiceTokensResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/voice/{number}:
+    patch:
+      operationId: patch_v3_channels_voice_number
+      tags:
+      - Channels
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: number
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV3ChannelsVoiceNumberRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV3ChannelsVoiceNumberResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/voice/{number}/rotate-secret:
+    post:
+      operationId: post_v3_channels_voice_number_rotate_secret
+      tags:
+      - Channels
+      summary: POST /v3/channels/voice/{number}/rotate-secret
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: number
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ChannelsVoiceNumberRotateSecretRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3ChannelsVoiceNumberRotateSecretResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/voice/{number}/test:
+    post:
+      operationId: post_v3_channels_voice_number_test
+      tags:
+      - Channels
+      summary: POST /v3/channels/voice/{number}/test
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: number
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ChannelsVoiceNumberTestRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3ChannelsVoiceNumberTestResponse'
+      x-evidence:
+        kind: documentation
+  /v3/channels/whatsapp:
+    post:
+      operationId: post_v3_channels_whatsapp
+      tags:
+      - Channels
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ChannelsWhatsappRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3ChannelsWhatsappResponse'
+      x-evidence:
+        kind: documentation
+  /v3/contacts:
+    get:
+      operationId: get_v3_contacts
+      tags:
+      - Contacts
+      summary: GET /v3/contacts
+      x-source: https://docs.sent.dm/reference/api/errors
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET https://api.sent.dm/v3/contacts  -H \"x-api-key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\" \n Rate Limiting \n Too\
+          \ Many Requests \n { \n \"success\" : false , \n \"status\" : 429 , \n \"error\" : { \n \"code\" : \"BUSINESS_002\" , \n \"message\"\
+          \ : \"Rate limit exceeded\" , \n \"doc_url\" : \"https://docs.sent.dm/reference/api/rate-limits\" \n } \n } \n Response Headers: \n\
+          \ Retry-After : 60 \n X-RateLimit-Limit : 10000 \n X"
+    post:
+      operationId: post_v3_contacts
+      tags:
+      - Contacts
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ContactsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3ContactsResponse'
+      x-evidence:
+        kind: documentation
+  /v3/contacts/{id}:
+    delete:
+      operationId: delete_v3_contacts_id
+      tags:
+      - Contacts
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_v3_contacts_id
+      tags:
+      - Contacts
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV3ContactsIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV3ContactsIdResponse'
+      x-evidence:
+        kind: documentation
+  /v3/conversations:
+    get:
+      operationId: get_v3_conversations
+      tags:
+      - Conversations
+      summary: Data Models
+      x-source: https://docs.sent.dm/reference/api/data-models
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV3ConversationsResponse'
+      x-evidence:
+        kind: documentation
+  /v3/conversations/{id}:
+    get:
+      operationId: get_v3_conversations_id
+      tags:
+      - Conversations
+      summary: Data Models
+      x-source: https://docs.sent.dm/reference/api/data-models
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV3ConversationsIdResponse'
+      x-evidence:
+        kind: documentation
+  /v3/me:
+    get:
+      operationId: get_v3_me
+      tags:
+      - Me
+      summary: GET /v3/me
+      x-source: https://docs.sent.dm/reference/api/errors
+      responses:
+        '200':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV3MeResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X GET https://api.sent.dm/v3/me  -H \"x-api-key: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\" \n Validation Issues \n Invalid\
+          \ Phone Number \n A POST /v3/messages request with a recipient that is not in E.164 format returns: \n { \n \"success\" : false , \n\
+          \ \"status\" : 400 , \n \"error\" : { \n \"code\" : \"VALIDATION_001\" , \n \"message\" : \"Request validation failed\" , \n \"details\"\
+          \ : { \n \"to\" : [ \"Each entry in 'to' m"
+  /v3/messages:
+    post:
+      operationId: post_v3_messages
+      tags:
+      - Messages
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3MessagesRequest'
+      responses:
+        '202':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3MessagesResponse'
+      x-evidence:
+        kind: documentation
+  /v3/messages/{id}:
+    get:
+      operationId: get_v3_messages_id
+      tags:
+      - Messages
+      summary: Data Models
+      x-source: https://docs.sent.dm/reference/api/data-models
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV3MessagesIdResponse'
+      x-evidence:
+        kind: documentation
+  /v3/messages/{id}/cancel:
+    post:
+      operationId: post_v3_messages_id_cancel
+      tags:
+      - Messages
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3MessagesIdCancelRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3MessagesIdCancelResponse'
+      x-evidence:
+        kind: documentation
+  /v3/messages/{id}/resend:
+    post:
+      operationId: post_v3_messages_id_resend
+      tags:
+      - Messages
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3MessagesIdResendRequest'
+      responses:
+        '202':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3MessagesIdResendResponse'
+      x-evidence:
+        kind: documentation
+  /v3/profiles:
+    post:
+      operationId: post_v3_profiles
+      tags:
+      - Profiles
+      summary: POST /v3/profiles (deprecated) 201 with a simulated profile.
+      description: Creates a new profile (deprecated). Returns a simulated profile when sandbox is true.
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ProfilesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v3/profiles/{profileid}:
+    delete:
+      operationId: delete_v3_profiles_profileid
+      tags:
+      - Profiles
+      summary: DELETE /v3/profiles/{profileId} (deprecated) 204 . The profile is not deleted.
+      description: Deletes a profile (deprecated). In sandbox mode returns 204 without deleting.
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: profileid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_v3_profiles_profileid
+      tags:
+      - Profiles
+      summary: PATCH /v3/profiles/{profileId} (deprecated) 200 with a simulated updated profile.
+      description: Updates a profile (deprecated). Returns a simulated updated profile when sandbox is true.
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: profileid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV3ProfilesProfileidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v3/profiles/{profileid}/campaigns:
+    post:
+      operationId: post_v3_profiles_profileid_campaigns
+      tags:
+      - Profiles
+      summary: POST /v3/profiles/{profileId}/campaigns (deprecated) 201 with a simulated campaign.
+      description: Creates a campaign for a profile (deprecated). Returns a simulated campaign in sandbox mode.
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: profileid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ProfilesProfileidCampaignsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v3/profiles/{profileid}/campaigns/{campaignid}:
+    delete:
+      operationId: delete_v3_profiles_profileid_campaigns_campaignid
+      tags:
+      - Profiles
+      summary: DELETE /v3/profiles/{profileId}/campaigns/{campaignId} (deprecated) 204 . The campaign is not deleted.
+      description: Deletes a campaign (deprecated). Sandbox returns 204 without deleting.
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: profileid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: campaignid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_v3_profiles_profileid_campaigns_campaignid
+      tags:
+      - Profiles
+      summary: PUT /v3/profiles/{profileId}/campaigns/{campaignId} (deprecated) 200 with a simulated updated campaign.
+      description: Updates a campaign (deprecated). Returns a simulated updated campaign when sandbox is true.
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: profileid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: campaignid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV3ProfilesProfileidCampaignsCampaignidRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v3/profiles/{profileid}/complete:
+    post:
+      operationId: post_v3_profiles_profileid_complete
+      tags:
+      - Profiles
+      summary: POST /v3/profiles/{profileId}/complete (deprecated) 202 . No completion is started.
+      description: Starts profile completion (deprecated). Sandbox returns 202 with no real action.
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: profileid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3ProfilesProfileidCompleteRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v3/sender-profiles:
+    post:
+      operationId: post_v3_sender_profiles
+      tags:
+      - Sender Profiles
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3SenderProfilesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3SenderProfilesResponse'
+      x-evidence:
+        kind: documentation
+  /v3/sender-profiles/{id}:
+    delete:
+      operationId: delete_v3_sender_profiles_id
+      tags:
+      - Sender Profiles
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_v3_sender_profiles_id
+      tags:
+      - Sender Profiles
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV3SenderProfilesIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV3SenderProfilesIdResponse'
+      x-evidence:
+        kind: documentation
+  /v3/templates:
+    get:
+      operationId: get_v3_templates
+      tags:
+      - Templates
+      summary: Data Models
+      x-source: https://docs.sent.dm/reference/api/data-models
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: 1-indexed page number (default 1)
+      - name: page_size
+        in: query
+        required: false
+        schema:
+          type: integer
+        description: Number of items per page (default 20, range 1–100)
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV3TemplatesResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_v3_templates
+      tags:
+      - Templates
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3TemplatesRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3TemplatesResponse'
+      x-evidence:
+        kind: documentation
+  /v3/templates/{id}:
+    delete:
+      operationId: delete_v3_templates_id
+      tags:
+      - Templates
+      summary: DELETE /v3/templates/{id}
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteV3TemplatesIdResponse'
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_v3_templates_id
+      tags:
+      - Templates
+      summary: PUT /v3/templates/{id}
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV3TemplatesIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutV3TemplatesIdResponse'
+      x-evidence:
+        kind: documentation
+  /v3/users:
+    post:
+      operationId: post_v3_users
+      tags:
+      - Users
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3UsersRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3UsersResponse'
+      x-evidence:
+        kind: documentation
+  /v3/users/{userid}:
+    delete:
+      operationId: delete_v3_users_userid
+      tags:
+      - Users
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: userid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteV3UsersUseridResponse'
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_v3_users_userid
+      tags:
+      - Users
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: userid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV3UsersUseridRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV3UsersUseridResponse'
+      x-evidence:
+        kind: documentation
+  /v3/webhooks:
+    get:
+      operationId: get_v3_webhooks
+      tags:
+      - Webhooks
+      summary: Data Models
+      x-source: https://docs.sent.dm/reference/api/data-models
+      parameters:
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV3WebhooksResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_v3_webhooks
+      tags:
+      - Webhooks
+      summary: POST /v3/webhooks
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3WebhooksRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3WebhooksResponse'
+      x-evidence:
+        kind: documentation
+  /v3/webhooks/{id}:
+    delete:
+      operationId: delete_v3_webhooks_id
+      tags:
+      - Webhooks
+      summary: Sandbox Mode
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_v3_webhooks_id
+      tags:
+      - Webhooks
+      summary: PUT /v3/webhooks/{id}
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutV3WebhooksIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PutV3WebhooksIdResponse'
+      x-evidence:
+        kind: documentation
+  /v3/webhooks/{id}/events:
+    get:
+      operationId: get_v3_webhooks_id_events
+      tags:
+      - Webhooks
+      summary: Data Models
+      x-source: https://docs.sent.dm/reference/api/data-models
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: page
+        in: query
+        required: false
+        schema:
+          type: integer
+      - name: page_size
+        in: query
+        required: false
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV3WebhooksIdEventsResponse'
+      x-evidence:
+        kind: documentation
+  /v3/webhooks/{id}/rotate-secret:
+    post:
+      operationId: post_v3_webhooks_id_rotate_secret
+      tags:
+      - Webhooks
+      summary: POST /v3/webhooks/{id}/rotate-secret
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3WebhooksIdRotateSecretRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3WebhooksIdRotateSecretResponse'
+      x-evidence:
+        kind: documentation
+  /v3/webhooks/{id}/test:
+    post:
+      operationId: post_v3_webhooks_id_test
+      tags:
+      - Webhooks
+      summary: POST /v3/webhooks/{id}/test
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV3WebhooksIdTestRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostV3WebhooksIdTestResponse'
+      x-evidence:
+        kind: documentation
+  /v3/webhooks/{id}/toggle-status:
+    patch:
+      operationId: patch_v3_webhooks_id_toggle_status
+      tags:
+      - Webhooks
+      summary: PATCH /v3/webhooks/{id}/toggle-status
+      x-source: https://docs.sent.dm/reference/api/test-mode
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PatchV3WebhooksIdToggleStatusRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PatchV3WebhooksIdToggleStatusResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetV3CallsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        meta:
+          type: object
+    PostV3CallsIdHangupRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3CallsIdHangupResponse:
+      type: object
+      properties:
+        '204':
+          type: string
+          description: The call is not ended (simulated).
+    DeleteV3CallsIdParticipantsResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    PostV3CallsIdParticipantsRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3CallsIdParticipantsResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    DeleteV3CallsIdParticipantsParticipantidResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    PatchV3CallsIdParticipantsParticipantidRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PatchV3CallsIdParticipantsParticipantidResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    PostV3CallsIdRecordingsRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3CallsIdRecordingsResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    PostV3ChannelsRcsRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3ChannelsRcsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: A simulated RCS agent echoing the request.
+    PostV3ChannelsSmsRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3ChannelsSmsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: A simulated market in PROVISIONING status.
+    PatchV3ChannelsSmsCountryTypeRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PatchV3ChannelsSmsCountryTypeResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: The stored market with the requested compliance changes applied.
+    PostV3ChannelsVoiceRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3ChannelsVoiceResponse:
+      type: object
+      properties:
+        '202':
+          type: string
+          description: Simulated voice number and callback secret (not stored).
+    PostV3ChannelsVoiceTokensRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3ChannelsVoiceTokensResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Token prefixed voice_test_ that cannot be used to place calls.
+    PatchV3ChannelsVoiceNumberRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PatchV3ChannelsVoiceNumberResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: The stored voice number with the requested changes applied.
+    PostV3ChannelsVoiceNumberRotateSecretRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3ChannelsVoiceNumberRotateSecretResponse:
+      type: object
+      properties:
+        '202':
+          type: string
+          description: New callback_secret (not stored); live request would return 200.
+    PostV3ChannelsVoiceNumberTestRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3ChannelsVoiceNumberTestResponse:
+      type: object
+      properties:
+        '202':
+          type: string
+          description: Passing result with simulated call_id; no real callback request.
+    PostV3ChannelsWhatsappRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3ChannelsWhatsappResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    PostV3ContactsRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+        phone_number:
+          type: string
+          description: Contact phone number.
+      required:
+      - phone_number
+    PostV3ContactsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: Simulated contact echoing phone_number.
+    PatchV3ContactsIdRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PatchV3ContactsIdResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: Simulated updated contact.
+    GetV3ConversationsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        meta:
+          type: object
+    GetV3ConversationsIdResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        meta:
+          type: object
+    GetV3MeResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        status:
+          type: integer
+        error:
+          type: object
+          properties:
+            code:
+              type: string
+            message:
+              type: string
+            details:
+              type: object
+              properties:
+                to:
+                  type: array
+                  items:
+                    type: string
+            doc_url:
+              type: string
+    PostV3MessagesRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+        to:
+          type: array
+          description: Recipient phone numbers.
+        channel:
+          type: array
+          description: Channels to send on.
+        template:
+          type: object
+          description: Template reference.
+      required:
+      - to
+      - template
+    PostV3MessagesResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: Contains status QUEUED and simulated recipients.
+    GetV3MessagesIdResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        meta:
+          type: object
+    PostV3MessagesIdCancelRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3MessagesIdCancelResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: Simulated message with status CANCELLED.
+    PostV3MessagesIdResendRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3MessagesIdResendResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: Simulated recipient with message_id equal to the path id.
+    PostV3ProfilesRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is processed in sandbox mode.
+    PatchV3ProfilesProfileidRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is processed in sandbox mode.
+    PostV3ProfilesProfileidCampaignsRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is processed in sandbox mode.
+    PutV3ProfilesProfileidCampaignsCampaignidRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is processed in sandbox mode.
+    PostV3ProfilesProfileidCompleteRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is processed in sandbox mode.
+    PostV3SenderProfilesRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3SenderProfilesResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: A simulated Sender Profile.
+    PatchV3SenderProfilesIdRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PatchV3SenderProfilesIdResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: The stored profile with the requested changes applied.
+    GetV3TemplatesResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        meta:
+          type: object
+    PostV3TemplatesRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3TemplatesResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+          description: Simulated template in DRAFT status.
+    DeleteV3TemplatesIdResponse:
+      type: object
+      properties:
+        '204':
+          type: string
+          description: The template is not deleted (simulated).
+    PutV3TemplatesIdRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PutV3TemplatesIdResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Simulated updated template.
+    PostV3UsersRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3UsersResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    DeleteV3UsersUseridResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    PatchV3UsersUseridRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PatchV3UsersUseridResponse:
+      type: object
+      properties:
+        X-Sandbox:
+          type: string
+          description: true when sandbox field was detected.
+    GetV3WebhooksResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        meta:
+          type: object
+    PostV3WebhooksRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3WebhooksResponse:
+      type: object
+      properties:
+        '201':
+          type: string
+          description: Simulated webhook with placeholder signing secret.
+    PutV3WebhooksIdRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PutV3WebhooksIdResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Simulated updated webhook.
+    GetV3WebhooksIdEventsResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        data:
+          type: object
+        meta:
+          type: object
+    PostV3WebhooksIdRotateSecretRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3WebhooksIdRotateSecretResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Placeholder signing_secret; real secret unchanged.
+    PostV3WebhooksIdTestRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PostV3WebhooksIdTestResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Simulated delivery result; no test event delivered.
+    PatchV3WebhooksIdToggleStatusRequest:
+      type: object
+      properties:
+        sandbox:
+          type: boolean
+          description: When true, the request is simulated.
+    PatchV3WebhooksIdToggleStatusResponse:
+      type: object
+      properties:
+        '200':
+          type: string
+          description: Simulated webhook reflecting the requested is_active.
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key
+security:
+- apiKey: []
+tags:
+- name: Calls
+- name: Channels
+- name: Contacts
+- name: Conversations
+- name: Me
+- name: Messages
+- name: Profiles
+- name: Sender Profiles
+- name: Templates
+- name: Users
+- name: Webhooks

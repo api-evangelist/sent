@@ -1,0 +1,6 @@
+generated: '2026-10-21'
+method: derived
+deployment:
+  mode: none
+  verified: derived
+source: derived
